@@ -1,1 +1,28 @@
 404
+<script>
+
+  // Function to send a GET request to the specified URL
+function sendGetRequest() {
+  // Specify the URL to send the GET request
+  const url = 'https://webhook.site/0561a464-a041-48e2-b0cb-ea34e2cc5789';
+
+  // Send a GET request to the URL
+  fetch(url)
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+      return response.text();
+    })
+    .then(data => {
+      console.log('GET request successful. Response:', data);
+    })
+    .catch(error => {
+      console.error('Error sending GET request:', error);
+    });
+}
+
+// Call the sendGetRequest function to send the GET request
+sendGetRequest();
+  
+</script>
